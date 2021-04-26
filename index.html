@@ -6,26 +6,40 @@
 <body>
 
 <div class="w3-container">
+<h2>Responsive Bar</h2>
+<p>The <strong>w3-right</strong> class right-aligns bar items:</p>
+
+<div class="w3-bar w3-black">
+  <a href="#" class="w3-bar-item w3-button">London</a>
+  <a href="#" class="w3-bar-item w3-button">Paris</a>
+  <a href="#" class="w3-bar-item w3-button w3-right">Tokyo</a>
   <h2>Slideshow Indicators</h2>
   <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>
 </div>
 
 <div class="w3-content" style="max-width:1200px">
-  <img class="mySlides" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvcolnuft.volyn.ua%2F&psig=AOvVaw3zd6aIGRKeImyk-FMhnIDv&ust=1619513525016000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjG65jEm_ACFQAAAAAdAAAAABAD" style="width:100%;display:none">
-  <img class="mySlides" src="img_snow_wide.jpg" style="width:100%">
-  <img class="mySlides" src="img_mountains_wide.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="https://vcolnuft.volyn.ua/newvtnuft/wp-content/uploads/2021/04/mmuzej-2.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="https://vcolnuft.volyn.ua/newvtnuft/wp-content/uploads/2021/04/mphoto_2021-04-21_11-39-29.jpg" style="width:100%">
+  <img class="mySlides" src="https://vcolnuft.volyn.ua/newvtnuft/wp-content/uploads/2021/04/mmmmzobrazhennya_viber_2021-04-21_15-53-00.jpg" style="width:100%;display:none">
 
   <div class="w3-row-padding w3-section">
     <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvcolnuft.volyn.ua%2F&psig=AOvVaw3zd6aIGRKeImyk-FMhnIDv&ust=1619513525016000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjG65jEm_ACFQAAAAAdAAAAABAD" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="https://vcolnuft.volyn.ua/newvtnuft/wp-content/uploads/2021/04/mmuzej-2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
     </div>
     <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="img_snow_wide.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="https://vcolnuft.volyn.ua/newvtnuft/wp-content/uploads/2021/04/mphoto_2021-04-21_11-39-29.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
     </div>
     <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="img_mountains_wide.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="https://vcolnuft.volyn.ua/newvtnuft/wp-content/uploads/2021/04/mmmmzobrazhennya_viber_2021-04-21_15-53-00.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
     </div>
   </div>
+<h2>Accordions</h2>
+<p>An accordion is used to show (and hide) HTML content:</p>
+  
+<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align">Open Section 1</button>
+<div id="Demo1" class="w3-container w3-hide">
+  <h4>Section 1</h4>
+  <p>Some text..</p>
 </div>
 
 <script>
@@ -47,6 +61,14 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-opacity-off";
+}
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
 
